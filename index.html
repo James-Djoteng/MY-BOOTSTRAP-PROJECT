@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh; /* Minimal height for better appearance */
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+
+        .multichoice-container {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: auto;
+        }
+
+        .send-btn {
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>HACKATHON EVENT REGISTRATION PORTAL</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Big Title and Small Title -->
+        <h1 class="text-primary font-weight-bold">HACKATHON EVENT REGISTRATION PORTAL</h1>
+        <p class="text-muted">Welcome dear students</p>
+
+        <!-- 3. Image and Form in a Row -->
+        <div class="row mt-3 center">
+            <!-- Image -->
+            <div class="col-md-6">
+                <img src="images/Students.png" alt="Students Image" class="img-fluid">
+            </div>
+            <!-- Form -->
+            <div class="col-md-6">
+                <div class="form-container">
+                    <!-- Form Title -->
+                    <h2 class="text-primary font-weight-bold text-center">FORM</h2>
+
+                    <!-- Username Field -->
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+
+                    <!-- Country Field (Dropdown) -->
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select class="form-control" id="country" name="country" required>
+                            <!-- Add options for different countries -->
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Togo">Togo</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+
+                    <!-- Level of Development Title -->
+                    <h5 class="text-primary">Level of Development:</h5>
+                    <!-- Level of Development Multichoice Container -->
+                    <div class="multichoice-container">
+                        <!-- Level of Development Multichoice -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="level" id="basic" value="basic">
+                            <label class="form-check-label" for="basic">Basic</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="level" id="medium" value="medium">
+                            <label class="form-check-label" for="medium">Medium</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="level" id="advanced" value="advanced">
+                            <label class="form-check-label" for="advanced">Advanced</label>
+                        </div>
+                    </div>
+
+                    <!-- Programming Skills Title -->
+                    <h5 class="text-primary">Programming Skills:</h5>
+                    <!-- Programming Skills Multichoice Container -->
+                    <div class="multichoice-container">
+                        <!-- Programming Skills Multichoice -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="java" value="java">
+                            <label class="form-check-label" for="java">Java</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="python" value="python">
+                            <label class="form-check-label" for="python">Python</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="javascript" value="javascript">
+                            <label class="form-check-label" for="javascript">JavaScript</label>
+                        </div>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button type="submit" class="btn btn-primary send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
